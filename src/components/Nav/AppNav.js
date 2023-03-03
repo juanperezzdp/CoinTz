@@ -2,9 +2,9 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBarr from './NavBarr';
 import Home from '../../page/Home/AppHome'
-import Cryptocurrencies from '../../page/Cryptocurrencies'
-import NFT from '../../page/NFT/Nft'
-import Products from '../../page/Products'
+import Cryptocurrencies from '../../page/Crypto/AppCrypto'
+import AppNFT from '../../page/NFT/AppNft'
+import Exchange from '../../page/Exchange/AppExchange'
 
 
 function AppNav() {
@@ -17,8 +17,8 @@ function AppNav() {
             <Route path='/' element={<NavBarr/>} />
             <Route index element={<Home/>} />
             <Route path='cryptocurrencies' element={<Cryptocurrencies/>} />
-            <Route path='nft' element={<NFT/>} />
-            <Route path='Products' element={<Products/>} />
+            <Route path='nft' element={<AppNFT/>} />
+            <Route path='*' element={<Exchange/>} />
         
     </Routes>
     </BrowserRouter>
