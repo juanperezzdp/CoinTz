@@ -1,7 +1,7 @@
 import React from 'react'
 import Login from './Login'
-import Logout from './Logout'
 import { useAuth0 } from "@auth0/auth0-react";
+import Profile from './Profile';
 
 function AppLogin() {
   const { isAuthenticated } = useAuth0();
@@ -10,7 +10,7 @@ function AppLogin() {
     <div>
         {isAuthenticated 
         ? (<>
-            <Logout />
+            <Profile />
           </>) 
           : (
           <Login/>

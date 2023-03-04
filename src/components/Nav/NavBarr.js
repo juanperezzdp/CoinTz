@@ -14,19 +14,26 @@ import AppLogin from '../Login/AppLogin';
 function NavBarr() {
   return (
     <>
-    <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand as={Link} to="https://www.youtube.com/watch?v=FFkLoUwQ9a4"><img style={{width: "6rem"}} src={Logo} alt={Logo} /></Navbar.Brand>
+
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand as={Link} to="/"><img style={{width: "6rem"}} src={Logo} alt={Logo}/></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+
           <Nav className="me-auto">
+           
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/Cryptocurrencies">CryptoMonedas</Nav.Link>
             <Nav.Link as={Link} to="/Nft">NFT</Nav.Link>
             <Nav.Link as={Link} to="Exchange">Exchange</Nav.Link>
             <AppLogin/>
+          
           </Nav>
-        </Container>
-      </Navbar>
-  </>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+ </>
   )
 }
 
