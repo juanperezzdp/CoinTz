@@ -37,10 +37,10 @@ function HomeLanding() {
             </div>
 
             <div className="img-p" >
-            <img src={HomeHero} alt="wallet"/>
+            <img src={HomeHero} alt="Movil"/>
             </div>
             <div>
-            <img className="img-pp"src={Movil} alt="Wallet" />
+            <img className="img-pp"src={Movil} alt="Movil" />
             </div>
             
             

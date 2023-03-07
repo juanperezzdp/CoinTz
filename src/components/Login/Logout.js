@@ -5,8 +5,8 @@ import '../Login/login.scss'
 function Logout() {
     const {logout} = useAuth0()
   return (
-    <button className='btn-login' onClick={() => logout()}>
-      Logout
+    <button className='btn-login' onClick={() => logout(() => {return window.location.origin})}>
+      Cerrar sesion
     </button>
   )
 }

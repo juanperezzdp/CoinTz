@@ -6,7 +6,7 @@ import { PropagateLoader } from 'react-spinners';
 
 
 function Profile() {
-  const { user, isLoading } = useAuth0();
+  const { user, isLoading, isAuthenticated} = useAuth0();
   const [openWindow, setOpenWindow] = useState(true);
 
   const closeWindow =()=>{
@@ -18,16 +18,19 @@ function Profile() {
   }
 
   return (
-    openWindow  && (
+    isAuthenticated  && (
       <div className='opacity'>
+      {openWindow && 
       <div className='profileLogin'>
         <img src={user.picture} alt={user.name} />
         <h2>{user.name}</h2>
         <p>{user.email}</p>      
         <p>{user.updated_at}</p>
+        <div>
         <Logout/>
         <button className='btn-login' onClick={closeWindow}>Cerrar</button>
-      </div>
+        </div>
+      </div>}
       </div>
     )
   );

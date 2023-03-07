@@ -13,16 +13,16 @@ import AppLogin from '../Login/AppLogin';
 
 function NavBarr() {
   return (
-    <>
+    <div>
 
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand as={Link} to="/"><img style={{width: "6rem"}} src={Logo} alt={Logo}/></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><img style={{width: "5rem"}} src={Logo} alt={Logo}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
 
           <Nav className="me-auto">
-           
+          
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/Cryptocurrencies">CryptoMonedas</Nav.Link>
             <Nav.Link as={Link} to="/Nft">NFT</Nav.Link>
@@ -33,7 +33,7 @@ function NavBarr() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
- </>
+ </div>
   )
 }
 

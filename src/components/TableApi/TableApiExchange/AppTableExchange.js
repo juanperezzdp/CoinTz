@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import SpinnerDavidhu from '../../Spiner/SpinnerDavidhu';
+
 
 
 const titles = ["#","Exchangen", "Puntuación de confianza","24h Volumen"]
@@ -6,6 +8,7 @@ const titles = ["#","Exchangen", "Puntuación de confianza","24h Volumen"]
 function AppTableExchange() {
   const [dataExchange, setDataExchange] = useState([]);
   const [search, setSearch] = useState('');
+  const [outTime, setOutTime] = useState(true);
 
   const searcher = (e)=>{
     setSearch(e.target.value)
@@ -17,18 +20,29 @@ function AppTableExchange() {
 
 
    useEffect(() => {
-    getExchagen()
-   }, []);
-
-
     const getExchagen = () => {
         fetch('https://api.coingecko.com/api/v3/exchanges')
         .then((res)=> res.json())
         .then(data =>{
+
+          setTimeout(() => {
             setDataExchange(data)
+            setOutTime(false);
+          }, 2000); 
+            
         })
-        .catch((err)=>console.log(err))
+        .catch((err)=>{throw err})
     }
+    
+
+
+
+
+    getExchagen()
+   }, []);
+
+
+    
   return (
     <div className='container'>
 
@@ -37,6 +51,9 @@ function AppTableExchange() {
             className='form-control bg-dark text-light border-0 mt-4 text-center' 
             value={search} onChange={searcher} />
 
+{outTime ? (
+            <SpinnerDavidhu/>
+        ):(
       <table className='table table-brand mt-4 table-hover mg-3'>
         <thead>
         <tr>
@@ -45,6 +62,7 @@ function AppTableExchange() {
             ))}
           </tr>
         </thead>
+        
         <tbody>
             {results && results.map((data, index) =>(
                 <tr key = {index}>
@@ -68,8 +86,7 @@ function AppTableExchange() {
             ))}
         </tbody>
       </table>
-
-  
+      )}
     </div>
   )
 }

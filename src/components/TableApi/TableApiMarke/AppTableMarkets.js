@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import SpinnerDavidhu from '../../Spiner/SpinnerDavidhu';
 
 const titles = ["#","Coin","Precio","Cambio de precio","24h Volumen"]
 
@@ -6,6 +7,7 @@ function AppTableMarkets(){
 
     const [coinsMarkets, setCoinsMarkets] = useState([]);
     const [search, setSearch] = useState('');
+    const [outTime, setOutTime] = useState(true);
 
   const searcher = (e)=>{
     setSearch(e.target.value)
@@ -16,16 +18,23 @@ function AppTableMarkets(){
   : coinsMarkets.filter((data)=> data.name.toLowerCase().includes(search.toLocaleLowerCase()))
 
 
-    const getMarkets = () => {
+    
+
+    useEffect(()=>{
+
+        const getMarkets = () => {
         fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true')
         .then((res)=> res.json())
         .then(data =>{
-            setCoinsMarkets(data)
+            setTimeout(() => {
+                setCoinsMarkets(data)
+                setOutTime(false);
+            }, 2000); 
+
         })
-        .catch((err)=>console.log(err))
+        .catch((err)=>{throw err})
     }
 
-    useEffect(()=>{
         getMarkets()
     }, [])
 
@@ -37,13 +46,17 @@ function AppTableMarkets(){
             className='form-control bg-dark text-light border-0 mt-4 text-center' 
             value={search} onChange={searcher} />
 
-      <table className='table table-brand mt-4 table-hover mg-3'>
-        <thead>
+        {outTime 
+        ? (
+            <SpinnerDavidhu/>
+        ):(
+        <table className='table table-brand mt-4 table-hover mg-3'>
+            <thead>
         <tr>
-          {titles.map((title, index) => (
-              <td key = {index}>{title}</td>
+            {titles.map((title, index) => (
+                <td key = {index}>{title}</td>
             ))}
-          </tr>
+        </tr>
         </thead>
         <tbody>
             {results && results.map((data, index) =>(
@@ -70,6 +83,7 @@ function AppTableMarkets(){
             ))}
         </tbody>
     </table>
+    )}
     </div>
     )
 }

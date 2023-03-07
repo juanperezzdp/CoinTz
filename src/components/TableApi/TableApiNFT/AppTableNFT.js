@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
+import SpinnerDavidhu from '../../Spiner/SpinnerDavidhu';
 
 const titles = ["#", "Coin", "Simbolo", "Plataformas"]
 
 function AppTableNFT() {
   const [dataNft, setDataNft] = useState([]);
   const [search, setSearch] = useState('');
+  const [outTime, setOutTime] = useState(true);
 
   const searcher = (e)=>{
     setSearch(e.target.value)
@@ -16,19 +18,26 @@ function AppTableNFT() {
 
 
   useEffect(() => {
+
+    const getDataNft = () =>{
+    fetch('https://api.coingecko.com/api/v3/nfts/list')
+    .then((res) => res.json())
+    .then(data => {
+      setTimeout(()=>{
+        setDataNft(data)
+        setOutTime(false)
+      },2000)
+      
+      
+    })
+    .catch((err)=>{throw err})
+  }
+
     getDataNft()
 
   }, []);
 
-  const getDataNft = () =>{
-    fetch('https://api.coingecko.com/api/v3/nfts/list')
-    .then((res) => res.json())
-    .then(data => {
-      //console.log(data)
-      setDataNft(data)
-    })
-    .catch((err)=>console.log(err))
-  }
+  
 
   //console.log(dataNft)
 
@@ -40,6 +49,10 @@ function AppTableNFT() {
             className='form-control bg-dark text-light border-0 mt-4 text-center' 
             value={search} onChange={searcher} />
 
+
+      {outTime ? (
+        <SpinnerDavidhu/>
+      ):(
       <table className='table table-brand mt-4 table-hover'>
         <thead>
         <tr>
@@ -59,8 +72,7 @@ function AppTableNFT() {
             ))}
         </tbody>
       </table>
-
-  
+      )}
     </div>
   );
 }
