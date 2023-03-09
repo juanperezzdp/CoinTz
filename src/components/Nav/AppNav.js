@@ -13,13 +13,13 @@ function AppNav() {
     <BrowserRouter>
     
     <Routes>
-        
-            <Route path='/' element={<NavBarr/>} />
+            
+            <Route exact  path='/nft' element={<AppNFT/>} />
+            <Route exact  path='/exchange' element={<Exchange/>} />
+            <Route exact  path='/cryptocurrencies' element={<Cryptocurrencies/>} />
+            <Route exact path='/' element={<NavBarr/>} />
             <Route index element={<Home/>} />
-            <Route path='cryptocurrencies' element={<Cryptocurrencies/>} />
-            <Route path='nft' element={<AppNFT/>} />
-            <Route path='*' element={<Exchange/>} />
-        
+
     </Routes>
     </BrowserRouter>
     </div>

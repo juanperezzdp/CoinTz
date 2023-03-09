@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Logo from '../../img/Picsart_23-02-18_08-08-03-484.png'
-import AppLogin from '../Login/AppLogin';
+import { useAuth0 } from "@auth0/auth0-react";
+import Login from '../Login/Login';
+import LoginIcon from '../Login/LoginIcon';
+import Profile from '../Login/Profile';
+
 
 
 
@@ -12,6 +16,11 @@ import AppLogin from '../Login/AppLogin';
 
 
 function NavBarr() {
+  const { isAuthenticated } = useAuth0();
+  const [card, setCard] = useState(false);
+
+  const handleOpenClick = () => setCard(!card);
+  
   return (
     <div>
 
@@ -21,13 +30,24 @@ function NavBarr() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
 
-          <Nav className="me-auto">
+          <Nav className="justify-content-end flex-grow-1 pe-3">
           
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/Cryptocurrencies">CryptoMonedas</Nav.Link>
+            <Nav.Link as={Link} to="/Exchange">Exchange</Nav.Link>
             <Nav.Link as={Link} to="/Nft">NFT</Nav.Link>
-            <Nav.Link as={Link} to="Exchange">Exchange</Nav.Link>
-            <AppLogin/>
+            
+            {isAuthenticated 
+        ? (<>
+        <button style={{borderRadius: "50%", border: "none", width: "max-content", marginLeft: "5.5rem"}} onClick={handleOpenClick}>
+        <LoginIcon />
+        {card && (<Profile/>)}
+        </button>
+          </>) 
+          : (
+          <Login/>
+        )}
+
           
           </Nav>
         </Navbar.Collapse>
