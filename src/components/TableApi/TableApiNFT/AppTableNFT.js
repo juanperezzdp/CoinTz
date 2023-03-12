@@ -23,12 +23,8 @@ function AppTableNFT() {
     fetch('https://api.coingecko.com/api/v3/nfts/list')
     .then((res) => res.json())
     .then(data => {
-      setTimeout(()=>{
         setDataNft(data)
         setOutTime(false)
-      },2000)
-      
-      
     })
     .catch((err)=>{throw err})
   }
@@ -36,10 +32,6 @@ function AppTableNFT() {
     getDataNft()
 
   }, []);
-
-  
-
-  //console.log(dataNft)
 
   return (
     <div className='container'>

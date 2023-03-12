@@ -28,13 +28,8 @@ function AppTableCrypto(){
             fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=gecko_desc&per_page=1000&page=1&sparkline=false')
             .then((res)=> res.json())
             .then(data =>{
-                setTimeout(() => {
                     setCoinsMarkets(data)
                     setOutTime(false);
-                  }, 2000); 
-
-                
-                
             })
             .catch((err)=>{throw err})
         }
@@ -89,9 +84,9 @@ function AppTableCrypto(){
             ))}
             
         </tbody>
-       
+    
     </table>
-     )}
+    )}
     </div>
     )
 }

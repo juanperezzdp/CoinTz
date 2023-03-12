@@ -24,12 +24,8 @@ function AppTableExchange() {
         fetch('https://api.coingecko.com/api/v3/exchanges')
         .then((res)=> res.json())
         .then(data =>{
-
-          setTimeout(() => {
             setDataExchange(data)
             setOutTime(false);
-          }, 2000); 
-            
         })
         .catch((err)=>{throw err})
     }

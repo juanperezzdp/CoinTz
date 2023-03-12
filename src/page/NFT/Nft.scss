@@ -1,23 +1,18 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.sec-benefits{
 
-    background: linear-gradient(220.55deg, #24CFC5 0%, #001C63 100%);
-    width: 100%;
-    height: 95vh;
-    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 95%, 0 80%, 0 80%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
     .intro1{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: max-content;
-    width: 95vw;
+    height: 75vh;
+    width: 100vw;
     
     .ig{
         width: 25rem;
@@ -49,7 +44,6 @@
             color: #19a8a6;
             border: 2px solid white;
         }
-}
 }
 }
 }

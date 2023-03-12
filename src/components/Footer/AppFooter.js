@@ -2,52 +2,41 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Apple, Facebook, Github, GooglePlay } from 'react-bootstrap-icons';
 import '../Footer/FooterSass.scss'
-import {Form, Button} from 'react-bootstrap';
+import  {Button} from 'react-bootstrap';
+import Logo from '../../img/LogoName.png'
 
 function AppFooter() {
   return (
-    <div className='containerfooter'>
+    < div className='containerfooter'>
     <div className='icons'>
-        <h1>CoinTz</h1>
+        <img style={{width: "8rem"}} src={Logo} alt="logo" />
         <div>
-        <Link to='/' className='linkIcons'><Apple/></Link>
-        <Link to='/' className='linkIcons'><Facebook/></Link>
-        <Link to='/' className='linkIcons'><Github/></Link>
-        <Link to='/' className='linkIcons'><GooglePlay/></Link>
+        <Link to='https://www.apple.com/es/store' className='linkIcons' target="_blank" ><Apple/></Link>
+        <Link to='https://www.facebook.com/' className='linkIcons' target="_blank" ><Facebook/></Link>
+        <Link to='https://github.com/juanperezzdp/CoinTz' className='linkIcons' target="_blank" ><Github/></Link>
+        <Link to='https://play.google.com/store/games?hl=es_419&gl=US' className='linkIcons' target="_blank" ><GooglePlay/></Link>
         </div>
     </div>
-        <ul className='link'>
-            <li>Acciones</li>
-            <li>Bitcoin</li>
-            <li>Coin</li>
-            <li>NFT</li>
+
+        <ul>
+            <Link to='/Cryptocurrencies'><li>CryptoMonedas</li></Link>
+            <p>Precios de criptomonedas de hoy por capitalización de mercado</p>
         </ul>
-        <ul className='link'>
-            <li>Acciones</li>
-            <li>Bitcoin</li>
-            <li>Coin</li>
-            <li>NFT</li>
+
+        <ul>
+            <Link to='/Exchange'><li>Exchenge</li></Link> 
+            <p>Principales intercambios de Exchange en criptomonedas y su capitalización </p>
         </ul>
-        <ul className='link'>
-            <li>Acciones</li>
-            <li>Bitcoin</li>
-            <li>Coin</li>
-            <li>NFT</li>
+
+        <ul>
+            <Link to='/Nft'><li>NFT</li></Link> 
+            <p>Colecciones de NFT enumeradas por volumen de ventas</p>
         </ul>
-        <div className='login'>
-        <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        </Form>
-            <div>
+
+            <div className='login'>
             <Button variant="outline-dark">Primary</Button>{' '}
             <Button variant="outline-dark">Primary</Button>{' '}
             </div>
-        </div>
     </div>
   )
 }

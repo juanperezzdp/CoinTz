@@ -7,7 +7,7 @@ function LoginIcon() {
   return (
     
     <div>
-    <img style={{ width: "2.5rem", borderRadius: "50%"}} src={user.picture} alt={user.name} />
+    <img style={{ width: "2.5rem", borderRadius: "50%"}} src={user.picture} alt="Img" />
     </div>
 
   )

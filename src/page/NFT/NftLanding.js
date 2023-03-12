@@ -1,11 +1,17 @@
 import React from 'react'
 import Dapp from '../../img/home_dapps.png'
-import '../NFT/Nft.scss'
+import '../Landing.scss'
+
 
 function NftLanding() {
   return (
     
-<section className='sec-benefits'>
+<section className='header'>
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
     <div className=" intro1">
         <img className="ig" src={Dapp} alt={Dapp}/>
     <div className="text-t">
