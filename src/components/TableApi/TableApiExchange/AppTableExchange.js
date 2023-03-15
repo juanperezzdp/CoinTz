@@ -50,7 +50,8 @@ function AppTableExchange() {
 {outTime ? (
             <SpinnerDavidhu/>
         ):(
-      <table className='table table-brand mt-4 table-hover mg-3'>
+        <div class="table-responsive">
+        <table className='table table-brand mt-4 table-hover mg-3'>
         <thead>
         <tr>
           {titles.map((title, index) => (
@@ -63,15 +64,9 @@ function AppTableExchange() {
             {results && results.map((data, index) =>(
                 <tr key = {index}>
 
-            <td>
-            <span>
-                {index}
-            </span>
-                <img src={data.image} alt={data.name} style={{width: "2rem", margin: "0 0.5rem"}} />
-            </td>
-
+            <td>{index +1}</td>
+            <td><img src={data.image} alt={data.name} style={{width: "1.5rem"}} /></td>
             <td>{data.name}</td>
-
             <td>{data.trust_score}</td>
 
             <td className=
@@ -80,8 +75,10 @@ function AppTableExchange() {
             </td>
             </tr>
             ))}
+            
         </tbody>
       </table>
+      </div>
       )}
     </div>
   )

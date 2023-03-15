@@ -7,9 +7,9 @@ function NftLanding() {
   return (
     
 <section className='header'>
-        <div class="ocean">
-            <div class="wave"></div>
-            <div class="wave"></div>
+        <div className="ocean">
+            <div className="wave"></div>
+            <div className="wave"></div>
         </div>
 
     <div className=" intro1">

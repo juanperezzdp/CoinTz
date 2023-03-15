@@ -45,6 +45,7 @@ function AppTableNFT() {
       {outTime ? (
         <SpinnerDavidhu/>
       ):(
+      <div class="table-responsive">
       <table className='table table-brand mt-4 table-hover'>
         <thead>
         <tr>
@@ -64,6 +65,7 @@ function AppTableNFT() {
             ))}
         </tbody>
       </table>
+      </div>
       )}
     </div>
   );

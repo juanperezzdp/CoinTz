@@ -10,9 +10,9 @@ import '../../page/Landing.scss'
 function HomeLanding() {
   return (
     <header className='header'>
-        <div class="ocean">
-            <div class="wave"></div>
-            <div class="wave"></div>
+        <div className="ocean">
+            <div className="wave"></div>
+            <div className="wave"></div>
         </div>
 <section className="sec-home">
     <div className="home-cta">

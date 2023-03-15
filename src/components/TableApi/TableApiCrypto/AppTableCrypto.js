@@ -3,7 +3,7 @@ import SpinnerDavidhu from '../../Spiner/SpinnerDavidhu';
 
 
 
-const titles = ["#","Coin","Precio","Cambio de precio","24h Volumen"]
+const titles = ["#","","Coin","Precio","Cambio de precio","24h Volumen"]
 
 function AppTableCrypto(){
 
@@ -49,6 +49,7 @@ function AppTableCrypto(){
         {outTime ? (
             <SpinnerDavidhu/>
         ):(
+        <div class="table-responsive">
         <table className='table table-brand mt-4 table-hover mg-3'>
         <thead>
         <tr>
@@ -63,12 +64,9 @@ function AppTableCrypto(){
             {results && results.map((data, index) =>(
                 <tr key = {index}>
 
-            <td>
-            <span>
-                {index}
-            </span>
-                <img src={data.image} alt={data.name} style={{width: "2rem", margin: "0 0.5rem"}} />
-            </td>
+            <td>{index + 1}</td>
+
+            <td><img src={data.image} alt={data.name} style={{width: "1.5rem"}} /></td>
 
             <td>{data.name}</td>
 
@@ -86,6 +84,7 @@ function AppTableCrypto(){
         </tbody>
     
     </table>
+    </div>
     )}
     </div>
     )
