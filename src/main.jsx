@@ -6,7 +6,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 
 const domain = "cointz.us.auth0.com"
-const clientId = "q5uynOdB3Xow0tWTXiqEuW49jxwHBy6p"
+const clientId = "FBPwHQH88gK7c1Wc4kdnep0oDNVTbMGf"
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

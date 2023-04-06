@@ -18,17 +18,17 @@ function AppFooter() {
     </div>
 
         <ul>
-            <Link to='/Cryptocurrencies'><li>CryptoMonedas</li></Link>
+           <li><a href='/Cryptocurrencies'>CryptoMonedas</a></li>
             <p>Precios de criptomonedas de hoy por capitalización de mercado</p>
         </ul>
 
         <ul>
-            <Link to='/Exchange'><li>Exchange</li></Link> 
+        <li><a href='/Exchange'>Exchange</a></li> 
             <p>Principales intercambios de Exchange en criptomonedas y su capitalización </p>
         </ul>
 
         <ul>
-            <Link to='/Nft'><li>NFT</li></Link> 
+            <li><a href='/Nft'>NFT</a></li> 
             <p>Colecciones de NFT enumeradas por volumen de ventas</p>
         </ul>
     </div>
