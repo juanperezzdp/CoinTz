@@ -5,6 +5,7 @@ import Home from '../../page/Home/AppHome'
 import Cryptocurrencies from '../../page/Crypto/AppCrypto'
 import AppNFT from '../../page/NFT/AppNft'
 import Exchange from '../../page/Exchange/AppExchange'
+import AppFooter from '../Footer/AppFooter';
 
 
 function AppNav() {
@@ -21,6 +22,7 @@ function AppNav() {
             <Route index element={<Home/>} />
 
     </Routes>
+    <AppFooter/>
     </BrowserRouter>
     </div>
   )

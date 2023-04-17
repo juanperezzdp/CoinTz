@@ -5,8 +5,9 @@ import AppNav from './components/NavBar/AppNav';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
-const domain = "cointz.us.auth0.com"
-const clientId = "FBPwHQH88gK7c1Wc4kdnep0oDNVTbMGf"
+
+const domain = 'cointz.us.auth0.com'
+const clientId = 'FCLce8NoaFDIB3W2N9qUuNSxwfxNEGs6'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

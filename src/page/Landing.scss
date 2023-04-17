@@ -212,14 +212,34 @@ $base: 0.6rem;
         }
     }
 
+    .containeArrow{
+        display: none ;
+    }
+
     .img-p{
         display: none;
     }
 
     .img-pp{
         display: flex;
-        width: 10rem;
+        width: 25rem;
         margin: 3rem;
+        animation-name: saltar;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        @keyframes saltar {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-20px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+        
     }
     }
 }
@@ -265,4 +285,5 @@ $base: 0.6rem;
         }
 }
 }
+
 }

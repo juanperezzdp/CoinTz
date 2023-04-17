@@ -1,5 +1,4 @@
 import React from 'react'
-import AppFooter from '../../components/Footer/AppFooter'
 import Profile from '../../components/Login/Profile'
 import NavBarr from '../../components/NavBar/NavBarr'
 import AppTableMarkets from '../../components/Table/TableApiMarke/AppTableMarkets'
@@ -11,7 +10,6 @@ function Home() {
     <HomeLanding/>
     <Profile/>
     <AppTableMarkets/>
-    <AppFooter/>
     </>
   )
 }
