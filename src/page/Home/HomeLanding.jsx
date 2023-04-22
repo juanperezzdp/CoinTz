@@ -34,7 +34,7 @@ function HomeLanding() {
               </div>
 
 
-              <h1 className="title-home">Precios de criptomonedas de hoy por capitalización del mercado</h1>
+              <h1 className="title-home">Precios de criptomonedas de hoy por capitalización del mercado.</h1>
               <p className="p-home">Obtén información actualizada al instante sobre los precios de criptomonedas y toma decisiones informadas para maximizar tus inversiones financieras.</p>
               <Link to='https://www.apple.com/es/store' target="_blank"><img className="store" src={AppStore} alt=""/></Link>
               <Link to='https://play.google.com/store/games?hl=es_419&gl=US' target="_blank"><img className="store" src={PlayStore} alt=""/></Link>
