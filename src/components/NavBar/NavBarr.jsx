@@ -33,9 +33,9 @@ function NavBarr() {
           <Nav className="justify-content-end flex-grow-1 pe-3">
           
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-            <Nav.Link as={Link} to="/Cryptocurrencies">CryptoMonedas</Nav.Link>
-            <Nav.Link as={Link} to="/Exchange">Exchange</Nav.Link>
-            <Nav.Link as={Link} to="/Nft">NFT</Nav.Link>
+            <Nav.Link as={Link} to="/IndexCrypto">CryptoMonedas</Nav.Link>
+            <Nav.Link as={Link} to="/IndexExchange">Exchange</Nav.Link>
+            <Nav.Link as={Link} to="/IndexNft">NFT</Nav.Link>
             
             {isAuthenticated 
         ? (<>

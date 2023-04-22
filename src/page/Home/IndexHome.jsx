@@ -3,7 +3,7 @@ import Profile from '../../components/Login/Profile'
 import NavBarr from '../../components/NavBar/NavBarr'
 import AppTableMarkets from '../../components/Table/TableApiMarke/AppTableMarkets'
 import HomeLanding from './HomeLanding'
-function Home() {
+function IndexHome() {
   return (
     <>
     <NavBarr/>
@@ -14,4 +14,4 @@ function Home() {
   )
 }
 
-export default Home
+export default IndexHome

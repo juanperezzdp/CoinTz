@@ -4,7 +4,7 @@ import AppTableCrypto from '../../components/Table/TableApiCrypto/AppTableCrypto
 import CryptoLanding from './CryptoLanding'
 
 
-function Cryptocurrencies() {
+function IndexCrypto() {
   return (
     <div>
     <NavBarr/>
@@ -14,4 +14,4 @@ function Cryptocurrencies() {
   )
 }
 
-export default Cryptocurrencies
+export default IndexCrypto

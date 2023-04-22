@@ -3,7 +3,7 @@ import NavBarr from '../../components/NavBar/NavBarr'
 import AppTableNFT from '../../components/Table/TableApiNFT/AppTableNFT'
 import NftLanding from './NftLanding'
 
-function Nft() {
+function IndexNft() {
   return (
     <div>
     <NavBarr/>
@@ -13,4 +13,4 @@ function Nft() {
   )
 }
 
-export default Nft
+export default IndexNft
