@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Apple, Facebook, Github, GooglePlay } from 'react-bootstrap-icons';
-import '../Footer/FooterSass.scss'
+import '../Footer/Footer.scss'
 import Logo from '../../img/LogoName.png'
 
-function AppFooter() {
+function IndexFooter() {
   return (
     < div className='containerfooter'>
     <div className='icons'>
@@ -18,21 +18,21 @@ function AppFooter() {
     </div>
 
         <ul>
-           <li><Link to='/Cryptocurrencies'>CryptoMonedas</Link></li>
+           <li><Link to='/IndexCrypto'>CryptoMonedas</Link></li>
             <p>Precios de criptomonedas de hoy por capitalización de mercado</p>
         </ul>
 
         <ul>
-        <li><Link to='/Exchange'>Exchange</Link></li> 
+        <li><Link to='/IndexExchange'>Exchange</Link></li> 
             <p>Principales intercambios de Exchange en criptomonedas y su capitalización </p>
         </ul>
 
         <ul>
-            <li><Link to='/Nft'>NFT</Link></li> 
+            <li><Link to='/IndexNft'>NFT</Link></li> 
             <p>Colecciones de NFT enumeradas por volumen de ventas</p>
         </ul>
     </div>
   )
 }
 
-export default AppFooter
+export default IndexFooter
