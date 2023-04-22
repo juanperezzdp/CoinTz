@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
-import '../Login/login.scss'
+import '../Login/Login.scss'
 function Login() {
     const {loginWithRedirect} = useAuth0();
   return (
