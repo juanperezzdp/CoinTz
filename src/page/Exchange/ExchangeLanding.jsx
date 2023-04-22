@@ -17,7 +17,7 @@ return (
     <div className=" intro1">
         <img className="ig" src={Dex} alt="Movil"/>
     <div className="text-t">
-        <h1>Exchange</h1>
+        <h1>Exchange.</h1>
             <p>Principales intercambios de Exchange en criptomonedas y su capitalización.</p>
         <button type="button" onClick={handleScroll} className='btn btn-outline-secondary'>
             Click para ver capitaliazacion
