@@ -8,7 +8,7 @@ import {RouterProvider} from 'react-router-dom'
 
 
 const domain = 'cointz.us.auth0.com'
-const clientId = 'FCLce8NoaFDIB3W2N9qUuNSxwfxNEGs6'
+const clientId = 'KW45lvUU5JL23qicvDfzH7bnkpqnIahU'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
