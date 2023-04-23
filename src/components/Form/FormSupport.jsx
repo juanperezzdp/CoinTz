@@ -8,8 +8,11 @@ function FormSupport() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [alert, setAlert] = useState(false);
   const [formData, setFormData] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
 
   const onSubmit = (data) => {
+    setIsSubmitting(true);
     fetch('https://formsubmit.co/ajax/juanperezzdp@gmail.com', {
       method: 'POST',
       headers: { 
@@ -18,13 +21,18 @@ function FormSupport() {
       },
       body: JSON.stringify(data)
     })
-      .then(response => response.json())
-      .then(data => {
-        setFormData(data);
-        setAlert(true);
-        reset();
-      })
-      .catch(error => console.log(error));
+    .then(response => response.json())
+    .then(data => {
+      setFormData(data);
+      setAlert(true);
+      reset();
+    })
+    .catch((err) => {
+      throw err;
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
   };
 
   return (
@@ -76,7 +84,8 @@ function FormSupport() {
           {errors.subject && <span>Por favor, ingrese un asunto.</span>}
         </div>
         <div className='btn-container'>
-          <button type="submit">Enviar</button>
+        <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Enviando..." : "Enviar"}</button>
         </div>
       </form> 
       
