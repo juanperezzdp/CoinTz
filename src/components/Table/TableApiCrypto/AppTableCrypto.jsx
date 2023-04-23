@@ -8,7 +8,7 @@ const titles = ["#","","Coin","Precio","Cambio de precio","24h Volumen"]
 
 function AppTableCrypto(){
 
-    const [coinsMarkets, setCoinsMarkets] = useState([]);
+    const [coinMarkets, setCoinMarkets] = useState([]);
     const [search, setSearch] = useState('');
     const [outTime, setOutTime] = useState(true);
     const [openModal, setOpenModal] = useState(false);
@@ -20,8 +20,8 @@ function AppTableCrypto(){
   }
 
   const results = !search 
-  ? coinsMarkets 
-  : coinsMarkets.filter((data)=> data.name.toLowerCase().includes(search.toLocaleLowerCase()))
+  ? coinMarkets 
+  : coinMarkets.filter((data)=> data.name.toLowerCase().includes(search.toLocaleLowerCase()))
 
 
     
@@ -31,7 +31,7 @@ function AppTableCrypto(){
             fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=gecko_desc&per_page=1000&page=1&sparkline=false')
             .then((res)=> res.json())
             .then(data =>{
-                    setCoinsMarkets(data)
+                    setCoinMarkets(data)
                     setOutTime(false);
             })
             .catch((err)=>{throw err})
@@ -41,7 +41,6 @@ function AppTableCrypto(){
     }, [])
 
     const handledetail = (data) => {
-        console.log(data)
         handleOpenModal()
         setDataC(data)
       }
@@ -63,7 +62,7 @@ function AppTableCrypto(){
         {outTime ? (
             <SpinnerDavidhu/>
         ):(
-        <div class="table-responsive">
+        <div className="table-responsive">
 
         <ModalDatail 
         openModal = {openModal}

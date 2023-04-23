@@ -1,6 +1,6 @@
 import React from 'react';
 import ImgExchange from '../../img/home_security.png'
-import '../Landing.scss'
+import '../LandingCEN.scss'
 
 
 function CryptoLanding() {

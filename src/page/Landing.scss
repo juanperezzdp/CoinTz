@@ -181,11 +181,10 @@ $base: 0.6rem;
         .img-coin{
             display: none;
         }
-
      }
     }
 
-
+   
     
 
 @media (max-width: 800px) {
@@ -240,7 +239,7 @@ $base: 0.6rem;
         margin-top: 22rem;
         margin-left: 3rem;
         animation-name: coin-s; 
-        animation-duration: 2.5s;
+        animation-duration: 1.8s;
         animation-iteration-count: infinite;
         
         
@@ -287,7 +286,7 @@ $base: 0.6rem;
         margin-top: 22rem;
         margin-left: 2.8rem;
         animation-name: coin-t;
-        animation-duration: 3.6s;
+        animation-duration: 4s;
         animation-iteration-count: infinite;
         
         @keyframes coin-t {
@@ -316,40 +315,3 @@ $base: 0.6rem;
 }
 
 
-.intro1{
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    justify-content: center;
-    height: 75%;
-    width: 100%;
-    
-    .ig{
-        width: 20rem;
-        }
-
-    .text-t{
-        text-align: center;
-        margin: 0 1rem;
-        h1{
-        color: white;
-        font-size: 2rem;
-    }
-    p{
-        color: white;
-    }
-    button{
-        width: 17rem;
-        height: 2.5rem;
-        color: white;
-        border: 2px solid white;
-        font-weight: 700;
-        &:hover{
-            background-color: white;
-            color: #19a8a6;
-            border: 2px solid white;
-        }
-}
-}
-
-}

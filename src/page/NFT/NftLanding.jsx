@@ -1,6 +1,6 @@
 import React from 'react'
 import Dapp from '../../img/home_dapps.png'
-import '../Landing.scss'
+import '../LandingCEN.scss'
 
 
 function NftLanding() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Dex from '../../img/home_dex.png'
-import '../Landing.scss'
+import '../LandingCEN.scss'
 function ExchangeLanding() {
 
     function handleScroll() {

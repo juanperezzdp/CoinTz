@@ -59,7 +59,7 @@ function AppTableNFT() {
         </thead>
         <tbody>
             {results && results.map((data, index) =>(
-              <tr>
+              <tr key={index}>
 
                 <td >{index + 1}</td>
                 <td>{data.name}</td>
