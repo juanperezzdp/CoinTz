@@ -9,14 +9,15 @@
 $base: 0.6rem;
 
 .chevron {
+  
   position: absolute;
   width: $base * 3.5;
-  height: $base * 0.8;
+  height: $base * 0.9;
   opacity: 0;
   transform: scale(0.3);
   animation: move-chevron 3s ease-out infinite;
     margin-left: -9rem;
-    margin-top: 9rem;
+    margin-top: 21rem;
 }
 
 .chevron:first-child {
@@ -119,11 +120,9 @@ $base: 0.6rem;
 
 .sec-home{
     display: flex;
-    align-items: center;
     justify-content: center;
     .cta-text{
         display: flex;
-        align-items: center;
         justify-content: center;
 
         .ob{
@@ -141,7 +140,7 @@ $base: 0.6rem;
             .title-home{
                 color: white;
                 width: 40rem;
-                font-size: 3.5rem;
+                font-size: 3.2rem;
                 padding-right: 2rem;
             }
             .p-home{
@@ -165,11 +164,21 @@ $base: 0.6rem;
             position: relative;
 
             img{
-                width: 15rem;
+                width: 10rem;
+                height: 5rem;
             }
         }
 
         .img-pp{
+            display: none;
+        }
+        .img-coin-t{
+            display: none;
+        }
+        .img-coin-s{
+            display: none;
+        }
+        .img-coin{
             display: none;
         }
 
@@ -185,7 +194,7 @@ $base: 0.6rem;
     header{
         width: 100vw;
         height: max-content;
-        
+             
 
     }
 
@@ -203,12 +212,15 @@ $base: 0.6rem;
         text-align: left;
         .title-home{
             width: 90vw;
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
         .p-home{
             width: 80vw;
             font-size: 1rem;
             
+        }
+        .store{
+            width: 7rem;
         }
     }
 
@@ -220,25 +232,83 @@ $base: 0.6rem;
         display: none;
     }
 
-    .img-pp{
+
+    .img-coin-s{
         display: flex;
-        width: 25rem;
-        margin: 3rem;
-        animation-name: saltar;
+        width:3rem ;
+        position: absolute;
+        margin-top: 22rem;
+        margin-left: 3rem;
+        animation-name: coin-s; 
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        
+        
+
+        @keyframes coin-s{
+            0% {
+                top: 0;
+                
+              }
+              100% {
+                top: -100px;
+                opacity: 0;
+                
+              }
+          }
+    }
+
+    .img-coin{
+        display: flex;
+        width:3rem ;
+        position: absolute;
+        margin-top: 22rem;
+        margin-left: 3rem;
+        animation-name: coin ;
         animation-duration: 3s;
         animation-iteration-count: infinite;
-
-        @keyframes saltar {
+        
+        @keyframes coin {
             0% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-20px);
-            }
-            100% {
-              transform: translateY(0);
-            }
+                top: 0;
+              }
+              100% {
+                top: -100px;
+                opacity: 0;
+                margin-left: 1rem;
+              }
           }
+    }
+
+    .img-coin-t{
+        display: flex;
+        width:2.7rem ;
+        position: absolute;
+        margin-top: 22rem;
+        margin-left: 2.8rem;
+        animation-name: coin-t;
+        animation-duration: 3.6s;
+        animation-iteration-count: infinite;
+        
+        @keyframes coin-t {
+            0% {
+                top: 0;
+              }
+              100% {
+                top: -100px;
+                opacity: 0;
+                margin-left: 5rem;
+              }
+          }
+    }
+
+
+    .img-pp{
+        display: flex;
+        width: 13rem;
+        margin-top: 1rem;
+        
+
         
     }
     }
@@ -248,35 +318,31 @@ $base: 0.6rem;
 
 .intro1{
     display: flex;
+    flex-direction: column;   
     align-items: center;
     justify-content: center;
-    height: 78%;
-    width: max-content;
+    height: 75%;
+    width: 100%;
     
     .ig{
-        width: 25rem;
-        display: flex;
-        margin-left: 5rem;
+        width: 20rem;
         }
 
     .text-t{
-        margin-left: 3rem;
+        text-align: center;
+        margin: 0 1rem;
         h1{
         color: white;
-        font-size: 4rem;
+        font-size: 2rem;
     }
     p{
         color: white;
     }
     button{
-        
-        width: 20rem;
+        width: 17rem;
         height: 2.5rem;
-        background-color: transparent;
         color: white;
         border: 2px solid white;
-        border-radius: 5px;
-        text-align: center;
         font-weight: 700;
         &:hover{
             background-color: white;

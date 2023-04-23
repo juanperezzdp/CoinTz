@@ -4,7 +4,11 @@ import HomeHero from '../../img/home_hero.png';
 import AppStore from '../../img/app-store.com.png';
 import PlayStore from '../../img/play-store1.png';
 import Arrow from '../../img/icons8-derecha-en-círculo-2-50.png';
-import Movil from '../../img/home_dapps.png';
+import Movil from '../../img/P-art.png';
+import Pbit from '../../img/P-bit.png';
+import Psol from '../../img/P-sol.png';
+import Peht from '../../img/P-eth.png';
+
 import '../../page/Landing.scss'
 
 function HomeLanding() {
@@ -16,10 +20,11 @@ function HomeLanding() {
 
   return (
     <header className='header'>
-        <div className="ocean">
+      <div className="ocean">
             <div className="wave"></div>
             <div className="wave"></div>
-        </div>
+            </div>
+        
 <section className="sec-home">
     <div className="home-cta">
 
@@ -46,14 +51,17 @@ function HomeLanding() {
               <div className="chevron"></div>
             </div>
 
-            <div className="img-p" >
-            <img style={{zIndex: '1', height: '31rem'}} src={HomeHero} alt="Movil"/>
+            <div>
+            <img className="img-p" style={{zIndex: '1', height: '31rem'}} src={HomeHero} alt="Movil"/>
             {/* <video autoPlay loop  style={{width: '14rem', position: 'absolute', marginLeft: '0.5rem', borderRadius: '2rem', marginTop: '1rem' }}>
             <source src={require("../../img/11_cambiarPIN.mp4")} type="video/mp4" />
             </video> */}
             </div>
             <div>
-            <img className="img-pp"src={Movil} alt="Movil" />
+              <img className="img-coin-t"src={Peht} alt="Movil" />
+              <img className="img-coin-s"src={Pbit} alt="Movil" />
+              <img className="img-coin"src={Psol} alt="Movil" />
+              <img className="img-pp"src={Movil} alt="Movil" />
             </div>
             
             
