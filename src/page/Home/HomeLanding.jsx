@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import HomeHero from '../../img/home_hero.png';
 import AppStore from '../../img/app-store.com.png';
 import PlayStore from '../../img/play-store1.png';
@@ -9,68 +9,83 @@ import Pbit from '../../img/P-bit.png';
 import Psol from '../../img/P-sol.png';
 import Peht from '../../img/P-eth.png';
 
-import '../../page/Landing.scss'
+import '../../page/Landing.scss';
 
 function HomeLanding() {
+	function handleScroll() {
+		const element = document.getElementById('table');
+		element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
 
-  function handleScroll() {
-    const element = document.getElementById("table");
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+	return (
+		<header className='header'>
+			<div className='ocean'>
+				<div className='wave'></div>
+				<div className='wave'></div>
+			</div>
 
-  return (
-    <header className='header'>
-      <div className="ocean">
-            <div className="wave"></div>
-            <div className="wave"></div>
-            </div>
-        
-<section className="sec-home">
-    <div className="home-cta">
+			<section className='sec-home'>
+				<div className='home-cta'>
+					<div className='cta-text'>
+						<div className='title'>
+							<div className='ob'>
+								<span>
+									Market Cap
+									<img className='icon' src={Arrow} alt='Wallet' />
+								</span>
+							</div>
 
-        <div className="cta-text"> 
+							<h1 className='title-home'>
+								Precios de criptomonedas de hoy por capitalización del mercado.
+							</h1>
+							<p className='p-home'>
+								Obtén información actualizada al instante sobre los precios de
+								criptomonedas y toma decisiones informadas para maximizar tus
+								inversiones financieras.
+							</p>
+							<Link to='https://www.apple.com/es/store' target='_blank'>
+								<img className='store' src={AppStore} alt='' />
+							</Link>
+							<Link
+								to='https://play.google.com/store/games?hl=es_419&gl=US'
+								target='_blank'
+							>
+								<img className='store' src={PlayStore} alt='' />
+							</Link>
+						</div>
 
-            <div className='title'>
+						<div
+							style={{ cursor: 'pointer' }}
+							onClick={handleScroll}
+							className='containeArrow'
+						>
+							<div className='chevron'></div>
+							<div className='chevron'></div>
+							<div className='chevron'></div>
+						</div>
 
-            <div className='ob'>
-              <span>Market Cap
-                <img className="icon" src={Arrow} alt="Wallet"/>
-              </span>
-              </div>
-
-
-              <h1 className="title-home">Precios de criptomonedas de hoy por capitalización del mercado.</h1>
-              <p className="p-home">Obtén información actualizada al instante sobre los precios de criptomonedas y toma decisiones informadas para maximizar tus inversiones financieras.</p>
-              <Link to='https://www.apple.com/es/store' target="_blank"><img className="store" src={AppStore} alt=""/></Link>
-              <Link to='https://play.google.com/store/games?hl=es_419&gl=US' target="_blank"><img className="store" src={PlayStore} alt=""/></Link>
-            </div>
-
-            <div style={{cursor: 'pointer'}} onClick={handleScroll} className="containeArrow">
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-            </div>
-
-            <div>
-            <img className="img-p" style={{zIndex: '1', height: '31rem'}} src={HomeHero} alt="Movil"/>
-            {/* <video autoPlay loop  style={{width: '14rem', position: 'absolute', marginLeft: '0.5rem', borderRadius: '2rem', marginTop: '1rem' }}>
+						<div>
+							<img
+								className='img-p'
+								style={{ zIndex: '1', height: '31rem' }}
+								src={HomeHero}
+								alt='Movil'
+							/>
+							{/* <video autoPlay loop  style={{width: '14rem', position: 'absolute', marginLeft: '0.5rem', borderRadius: '2rem', marginTop: '1rem' }}>
             <source src={require("../../img/11_cambiarPIN.mp4")} type="video/mp4" />
             </video> */}
-            </div>
-            <div>
-              <img className="img-coin-t"src={Peht} alt="Movil" />
-              <img className="img-coin-s"src={Pbit} alt="Movil" />
-              <img className="img-coin"src={Psol} alt="Movil" />
-              <img className="img-pp"src={Movil} alt="Movil" />
-            </div>
-            
-            
-        </div>
-
-        </div>
-</section>
-</header>  
-  )
+						</div>
+						<div>
+							<img className='img-coin-t' src={Peht} alt='Movil' />
+							<img className='img-coin-s' src={Pbit} alt='Movil' />
+							<img className='img-coin' src={Psol} alt='Movil' />
+							<img className='img-pp' src={Movil} alt='Movil' />
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+	);
 }
 
-export default HomeLanding
+export default HomeLanding;

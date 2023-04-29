@@ -1,64 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+.opacity {
+	width: max-content;
 
-.opacity{
-width: max-content;
+	.profileLogin {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 20rem;
+		height: 20rem;
+		border-radius: 20px;
+		background: linear-gradient(220.55deg, #4643df 0%, #0b0a47 100%);
+		box-shadow: 0 10px 20px 0 0 black;
+		color: white;
+		position: absolute;
+		z-index: 9;
+		margin-left: -20rem;
 
-.profileLogin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 20px;
-    background: linear-gradient(220.55deg, #4643DF 0%, #0B0A47 100%);
-    box-shadow: 0 10px 20px 0 0 black;
-    color: white;
-    position: absolute;
-    z-index: 9;
-    margin-left: -20rem;
-
-    img{
-        width: 7rem;
-        border-radius: 50%
-    }
-}
-}
-
-.btn-login{
-width: 6rem;
-height: 1.5rem;
-border: none;
-border-radius: 5px ;
-background: linear-gradient(220.55deg, #001C63 0%, #24CFC5 110%);
-color: white;
-margin: 5px;
-margin-top: 0.5rem;
-font-size: 0.8rem;
+		img {
+			width: 7rem;
+			border-radius: 50%;
+		}
+	}
 }
 
-@media(max-width: 990px){
-    .opacity{
-    .profileLogin{
-        width: max-content;
-        height: max-content;
-        margin-left: 8rem;
-        padding: 5px;
-        margin-top: 1rem;
-        margin-left: -0.5rem;
-        
-        img{
-        width: 3rem;
-        border-radius: 50%
-    }
-    }
+.btn-login {
+	width: 6rem;
+	height: 1.5rem;
+	border: none;
+	border-radius: 5px;
+	background: linear-gradient(220.55deg, #001c63 0%, #24cfc5 110%);
+	color: white;
+	margin: 5px;
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
 }
-.btn-login{
-    margin: 0 0.5rem;
-}
+
+@media (max-width: 990px) {
+	.opacity {
+		.profileLogin {
+			width: max-content;
+			height: max-content;
+			margin-left: 8rem;
+			padding: 5px;
+			margin-top: 1rem;
+			margin-left: -0.5rem;
+
+			img {
+				width: 3rem;
+				border-radius: 50%;
+			}
+		}
+	}
+	.btn-login {
+		margin: 0 0.5rem;
+	}
 }
