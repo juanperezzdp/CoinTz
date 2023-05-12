@@ -1,4 +1,4 @@
-# CoinTz
+# CoinTz https://resilient-fairy-8d17a5.netlify.app/
 
 [![CoinTz.png](https://i.postimg.cc/qB6dZP1P/CoinTz.png)](https://postimg.cc/K4bV1HSf)
 
